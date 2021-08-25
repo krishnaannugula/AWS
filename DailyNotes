@@ -1,0 +1,26 @@
+
+#!/bin/bash
+yum update -y
+amazon-linux-extras install nginx1.12 -y
+service nginx start
+systemctl enable nginx
+echo "<h1>$(cat /etc/hostname)</h1>" >> /usr/share/nginx/html/index.html
+PVTIP=$(curl -sL http://169.254.169.254/latest/meta-data/local-ipv4)
+echo "<h1>$PVTIP</h1>" >> /usr/share/nginx/html/index.html
+
+yum update
+sudo amazon-linux-extras install ansible2
+yum install git -y
+git clone https://github.com/hlta/cis-amazon-linux-2.git /root/roles/cis-amazon-linux-2
+nano playbook.yaml
+---
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  become: yes
+  roles:
+	- cis-amazon-linux-2
+
+ansible-playbook playbook.yaml
+
+https://github.com/mavrick202/dockertest1
