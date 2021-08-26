@@ -24,3 +24,8 @@ nano playbook.yaml
 ansible-playbook playbook.yaml
 
 https://github.com/mavrick202/dockertest1
+
+
+26 August 2021 read below content for l4 vs l7 load balancers
+https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236
+
