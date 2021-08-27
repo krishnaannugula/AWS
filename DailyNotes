@@ -30,3 +30,22 @@ https://github.com/mavrick202/dockertest1
 https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236
 loss leader pricing 
 
+
+27 August 2021
+
+Network Load Balancer(NLB) - L4 or Layer 4 or Transport Layer
+
+AWS NLB dont support HTTP -> HTTPS redirection.
+AWS NLB dont support path/URL based routing as its L4.
+AWS NLB dont support WAF
+
+
+
+AWS is a very good usage for UDP based applications.
+Its als a good choice for internal LB as there wont be any HTTPS redirection & URL based routing.
+AWS NLB support any port so we can use as a LB between the Jump Hosts.
+
+
+
+
+
