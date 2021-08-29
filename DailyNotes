@@ -46,6 +46,12 @@ Its als a good choice for internal LB as there wont be any HTTPS redirection & U
 AWS NLB support any port so we can use as a LB between the Jump Hosts.
 
 
+29 August 2021
 
 
+while true 
+do
+curl -sl https://www.krishnaannugula.xyz/ | grep -i Webserver
+sleep 1
+done
 
