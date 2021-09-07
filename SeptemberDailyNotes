@@ -60,5 +60,11 @@ curl http://169.254.169.254/latest
  for I in {1..10}; do echo $(date)| tee File-$I;aws s3 cp File-$I s3://mylocaltestlogs/File-$I ;sleep 1; done
 
 
+IAM Policies
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
+https://docs.aws.amazon.com/IAM/latest/UserGuide/images/PolicyEvaluationHorizontal.png
+
+
 
  
