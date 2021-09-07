@@ -20,3 +20,5 @@ cd  $HOME/.ssh
 Add public key to the authorized_keys file  appenidng username to it
 nano authorized_keys
 chmod 400 authorized_keys
+exit to root
+service sshd restart 
