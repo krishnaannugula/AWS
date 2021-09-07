@@ -45,3 +45,20 @@ for VPC in $(aws ec2 describe-vpcs | jq ".Vpcs[].CidrBlock" | tr -d '"'); do ech
 
 to chnage aws configuration please go to below folder 
 cd  .aws/
+
+aws s3 cp help (this comand get the script for s3)
+
+to get latest metadata try below to the role based access key an secrate key 
+curl http://169.254.169.254/latest
+ curl http://169.254.169.254/latest/meta-data/
+ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/EC2-S3Access(RoleName)
+ 
+ To install AWS cli in local window machine 
+ https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html
+ 
+ 
+ for I in {1..10}; do echo $(date)| tee File-$I;aws s3 cp File-$I s3://mylocaltestlogs/File-$I ;sleep 1; done
+
+
+
+ 
