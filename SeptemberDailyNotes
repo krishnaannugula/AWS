@@ -32,3 +32,10 @@ aws ec2 describe-vpcs
 
 can provide any availble output as appending to commands
 aws ec2 describe-vpcs --output table
+
+to Install JQ in linux
+ yum update && yum -y install jq
+jq is json parser which shows the json in beauty and we can get the attributes out easly
+
+aws ec2 describe-vpcs | jq ".Vpcs[].VpcId"
+aws ec2 describe-vpcs | jq ".Vpcs[].CidrBlock"
