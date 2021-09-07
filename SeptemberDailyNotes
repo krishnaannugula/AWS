@@ -66,5 +66,9 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-l
 https://docs.aws.amazon.com/IAM/latest/UserGuide/images/PolicyEvaluationHorizontal.png
 
 
+ARN :- Amazon resource name
+
+policy generator , we can define custom policies 
+https://awspolicygen.s3.amazonaws.com/policygen.html
 
  
