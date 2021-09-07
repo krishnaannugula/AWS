@@ -26,3 +26,9 @@ service sshd restart
 
  Syntax to conifgure user for aws :-   aws configure 
  using access key and secrate key 
+
+default output which configured eariler 
+aws ec2 describe-vpcs 
+
+can provide any availble output as appending to commands
+aws ec2 describe-vpcs --output table
