@@ -3,3 +3,20 @@ Sept 1st Cname to add in Route53 for domain krishnaannugula.xyz
 _08412D772B4B7B9D15CF55E95877F2F5.krishnaannugula.xyz
 
 65D9C73B2D1E7B6173B9786CC2EFC104.CBA45681B520FA910AA01E9142D06EFD.377a2be8a125856.comodoca.com
+
+
+
+Spet 7th 
+How to create a user in linux 
+
+useradd -m -G root username
+cat /etc/passwd
+
+Su - username
+mkdir $HOME/.ssh 
+chmod 700  $HOME/.ssh
+touch  $HOME/.ssh/authorized_keys
+cd  $HOME/.ssh
+Add public key to the authorized_keys file  appenidng username to it
+nano authorized_keys
+chmod 400 authorized_keys
