@@ -62,6 +62,9 @@ curl http://169.254.169.254/latest
 
 IAM Policies
 
+1.what are the permissions for any service
+2.who need to get access
+
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
 https://docs.aws.amazon.com/IAM/latest/UserGuide/images/PolicyEvaluationHorizontal.png
 
@@ -71,4 +74,20 @@ ARN :- Amazon resource name
 policy generator , we can define custom policies 
 https://awspolicygen.s3.amazonaws.com/policygen.html
 
+ Example as below:-
  
+ {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1631046232378",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:StartInstances",
+        "ec2:StopInstances"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:ec2:us-east-1:493471156155:instance/*"
+    }
+  ]
+}
