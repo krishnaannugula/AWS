@@ -39,3 +39,9 @@ jq is json parser which shows the json in beauty and we can get the attributes o
 
 aws ec2 describe-vpcs | jq ".Vpcs[].VpcId"
 aws ec2 describe-vpcs | jq ".Vpcs[].CidrBlock"
+aws ec2 describe-vpcs | jq ".Vpcs[].CidrBlock" | tr -d '"'
+
+for VPC in $(aws ec2 describe-vpcs | jq ".Vpcs[].CidrBlock" | tr -d '"'); do echo "The VPC id is $VPC"; sleep 1; done
+
+to chnage aws configuration please go to below folder 
+cd  .aws/
