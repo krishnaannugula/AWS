@@ -91,3 +91,21 @@ https://awspolicygen.s3.amazonaws.com/policygen.html
     }
   ]
 }
+
+
+
+September 8
+
+create event using lambda
+
+
+import json
+import boto3
+
+def lambda_handler(event, context):
+    client = boto3.client('iam')
+    uname = event['detail']['requestParameters']['userName']
+    client.put_user_permissions_boundary(
+    UserName=uname,
+    PermissionsBoundary='arn:aws:iam::721834156908:policy/awsb31-permissions-boundry'
+)
